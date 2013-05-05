@@ -1,0 +1,13 @@
+Before=getty.target
+
+
+[Service]
+ExecStart=/root/cecd /var/ubus/cecd
+Type=simple
+Restart=always
+RestartSec=1
+TTYPath=/dev/tty2
+
+[Install]
+Alias=multi-user.target.wants/cecd.service
+
